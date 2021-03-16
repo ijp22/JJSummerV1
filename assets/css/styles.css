@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins';
+}
+
+html {
+    font: normal 16px sans-serif;
+    color: #555;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 80px;
+}
+
+@media (max-width: 800px) {
+    section {
+        padding: 50px 20px;
+    }
+}
+
+/*Header Styles*/
+header {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 50px 0;
+    animation: 1s fadein 0.5s forwards;
+    opacity: 0;
+    color: #fff;
+    z-index: 1000;
+}
+
+.fab {
+    padding: 15px;
+    font-size: 30px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px;
+    color: white;
+}
+
+.fa-facebook:hover {
+    background: #3b5998;
+    border-radius: 10%;
+    color: white;
+}
+
+.fa-apple:hover {
+    background: #fc3c44;
+    border-radius: 10%;
+    color: white;
+}
+
+.fa-twitter:hover {
+    background: #55acee;
+    border-radius: 10%;
+    color: white;
+}
+
+.fa-youtube:hover {
+    background: #bb0000;
+    border-radius: 10%;
+    color: white;
+}
+
+.fa-instagram:hover {
+    background: #125688;
+    border-radius: 10%;
+    color: white;
+}
+.fa-spotify:hover {
+    background: #1db954;
+    border-radius: 10%;
+    color: white;
+}
+.fa-mailchimp:hover {
+    background: #ffd14f;
+    border-radius: 10%;
+    color: white;
+}
+
+@keyframes fadein {
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 800px) {
+    header {
+        position: absolute;
+        padding: 10px 10px;
+        justify-content: center;
+    }
+
+    .fa {
+        padding: 10px;
+        font-size: 20px;
+        width: 25px;
+        margin: 5px;
+    }
+}
+
+/*Hero Styles*/
+.hero {
+    padding-top: 200px;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.hero .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+    background-color: #555;
+}
+
+.hero img {
+    position: relative;
+    justify-content: center;
+    width: 25%;
+    height: 25%;
+    margin-bottom: 40px;
+}
+
+.hero-content-area {
+    opacity: 0;
+    margin-top: 100px;
+    animation: 2s slidefade 1s forwards;
+}
+
+@keyframes slidefade {
+    100% {
+        opacity: 1;
+        margin: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .hero {
+        min-height: 100vh;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero h3 {
+        font-size: 24px;
+    }
+
+    .hero a.btn {
+        padding: 15px 40px;
+    }
+
+    .hero img {
+        width: 50%;
+        height: 50%;
+    }
+}
+
+.modalcontainer {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.modalcontainer.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal {
+    background-color: white;
+    padding: 30px 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 600px;
+    max-width: 90%;
+}
+
+.modal h1 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.modal button {
+    background-color: #ffd14f;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    padding: 10px 25px;
+}
+
+.modal input {
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    padding: 10px 25px;
+}
+
+#close {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -2rem;
+    margin-top: -1rem;
+    cursor: pointer;
+}
